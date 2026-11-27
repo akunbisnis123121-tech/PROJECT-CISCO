@@ -1,1 +1,47 @@
+enable
+configure terminal
+hostname R1-LAB
 
+interface GigabitEthernet0/0
+description Interface utama ke Switch
+no shutdown
+exit
+
+interface GigabitEthernet0/0.10
+description Gateway VLAN 10 Siswa
+encapsulation dot1Q 10
+ip address 192.168.10.1 255.255.255.192
+exit
+
+interface GigabitEthernet0/0.20
+description Gateway VLAN 20 Guru
+encapsulation dot1Q 20
+ip address 192.168.10.65 255.255.255.224
+exit
+
+interface GigabitEthernet0/0.30
+description Gateway VLAN 30 Server
+encapsulation dot1Q 30
+ip address 192.168.10.97 255.255.255.240
+exit
+
+ip dhcp excluded-address 192.168.10.1
+ip dhcp excluded-address 192.168.10.65
+ip dhcp excluded-address 192.168.10.97 192.168.10.110
+
+ip dhcp pool POOL-SISWA
+network 192.168.10.0 255.255.255.192
+default-router 192.168.10.1
+dns-server 192.168.10.100
+exit
+
+ip dhcp pool POOL-GURU
+network 192.168.10.64 255.255.255.224
+default-router 192.168.10.65
+dns-server 192.168.10.100
+exit
+
+end
+write memory
+
+LALU PING ANTAR PC DAN VLAN 👏
