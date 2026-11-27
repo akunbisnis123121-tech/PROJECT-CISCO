@@ -1,1 +1,5 @@
-
+Perancangan dan Implementasi Jaringan LAN Berbasis Cisco Packet Tracer untuk Laboratorium Komputer Sekolah ✨
+Bayangin aja satu ruangan lab isinya ada PC anak-anak, PC guru, sama server lokal. Kalau disatuin tanpa dipisah,
+trafik jaringan gampang penuh dan kurang tertib. Makanya kita bagi jadi 3 VLAN (jaringan virtual) dan dihubungkan
+pakai metode Router-on-a-Stick—artinya satu kabel utama dari switch ke router dibagi jadi beberapa 
+jalur virtual pakai sub-interface.💕
