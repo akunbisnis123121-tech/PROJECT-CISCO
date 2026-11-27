@@ -3,22 +3,22 @@ configure terminal
 hostname SW1-LAB
 
 vlan 10
-name LAB-SISWA
+name LAB-SISWA 🐱‍🚀
 vlan 20
-name LAB-GURU
+name LAB-GURU 🥶
 vlan 30
-name SERVER-LOKAL
+name SERVER-LOKAL 🤧
 exit
 
 interface GigabitEthernet0/1
-description Jalur Trunk ke Router
+description Jalur Trunk ke Router 💀
 switchport mode trunk
 switchport trunk allowed vlan 10,20,30
 no shutdown
 exit
 
 interface range FastEthernet0/1 - 10
-description Port PC Siswa
+description Port PC Siswa ☠
 switchport mode access
 switchport access vlan 10
 spanning-tree portfast
@@ -26,7 +26,7 @@ no shutdown
 exit
 
 interface range FastEthernet0/11 - 15
-description Port PC Guru
+description Port PC Guru 😶
 switchport mode access
 switchport access vlan 20
 spanning-tree portfast
@@ -34,7 +34,7 @@ no shutdown
 exit
 
 interface FastEthernet0/16
-description Port Server Lokal
+description Port Server Lokal 🤔
 switchport mode access
 switchport access vlan 30
 spanning-tree portfast
