@@ -14,5 +14,21 @@ Kenapa Server pakai IP manual (192.168.10.100)? Biar alamatnya nggak berubah-uba
 Kalau anak-anak buka server ujian atau ambil file materi, alamatnya selalu tetap Sementara PC Siswa dan PC Guru dibikin otomatis
 (DHCP) biar nggak capek ngisi IP satu per satu pas jumlah PC-nya banyak 👀
 
+• Cara Rakit di Cisco Packet Tracer 😣
+•Taruh perangkat di layar: Masukkan router 2911, switch 2960-24TT, 1 Server,
+•minimal 1–2 PC buat guru, dan beberapa PC buat siswa 👨‍👩‍👧‍👦
+
+Pasang kabel 🤩
+•Sambungin R1-LAB port Gig0/0 ke SW1-LAB port Gig0/1 pakai kabel Copper
+Straight-Through (kabel lurus). Ini bakal jadi jalur Trunk (jalan tol buat semua VLAN) 
+•Sambungin switch ke PC dan server juga pakai kabel Copper Straight-Through sesuai nomor port di bagian 4 🤐
+
+3.Setting Switch 🦝 Bikin VLAN 10, 20, 30, set Gig0/1 jadi mode trunk, dan masukin port-port bawah ke VLAN-nya masing-masing 🤬
+4.Setting Router: Nyalain Gig0/0, bikin sub-interface tiap VLAN kasih IP gateway, terus bikin DHCP pool buat siswa dan guru
+(jangan lupa alamat gateway dan server di-exclude biar nggak ketabrak) 😚
+5.Setting IP di Server & PC 😤
+•Di Server (Desktop > IP Configuration): isi statis IP 192.168.10.100, subnet 255.255.255.240, gateway 192.168.10.97.
+•Di PC siswa dan guru: tinggal klik DHCP aja, nanti otomatis dapet IP sendiri 🐊
+
 
 
